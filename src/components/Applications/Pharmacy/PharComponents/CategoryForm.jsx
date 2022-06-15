@@ -1,8 +1,19 @@
+import { DeleteForeverRounded } from "@mui/icons-material";
 import React from "react";
 
 const CategoryForm = () => {
+  const data = [
+    { name: "Medicine", id: "0001" },
+    { name: "Tools", id: "0002" },
+  ];
+  const DeleteFun = (id) => {
+    console.log("Deleted" + id);
+  };
   return (
     <div>
+      <h1 className="text-blue-600 text-[30px]">
+        <b>Categories</b>
+      </h1>
       <div className="my-6 w-[60%]">
         <form>
           <div class="relative z-0 w-full mb-6 group">
@@ -29,6 +40,47 @@ const CategoryForm = () => {
             Add Category
           </button>
         </form>
+      </div>
+      <div>
+        <div class="w-[80%]">
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" class="px-6 py-3">
+                    Product name
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Delete</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((cat, idx) => (
+                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    >
+                      {cat.name}
+                    </th>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        onClick={() => {
+                          DeleteFun(cat.id);
+                        }}
+                        value={cat.id}
+                        class="font-medium text-rose-700 dark:text-white hover:underline"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );
