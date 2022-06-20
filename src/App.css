@@ -1,9 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
- }
- .card-shadow {
-  box-shadow: 5px 8px 12px -3px #787878;
+  font-family: "Open Sans", sans-serif;
+}
+.card-shadow {
+  box-shadow: 0 0px 10px 4px #f1f1f1;
+  /* box-shadow: 5px 8px 12px -3px #787878; */
 }

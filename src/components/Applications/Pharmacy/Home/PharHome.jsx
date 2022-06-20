@@ -7,6 +7,11 @@ import Sidebar from "../PharComponents/Sidebar";
 import CategoryForm from "../PharComponents/CategoryForm";
 import VendorForm from "../PharComponents/VendorForm";
 import BillForm from "../../GlobalsComp/BillForm";
+import PharSales from "../PharComponents/PharSales";
+import PharSalesHistory from "../PharComponents/PharSalesHistory";
+import TearBreakagesHistory from "../PharComponents/TearBreakagesHistory";
+import TearBreakage from "../PharComponents/TearBreakage";
+import PharBills from "../PharComponents/PharBills";
 
 const PharHome = () => {
   return (
@@ -25,14 +30,23 @@ const PharHome = () => {
               <Route path="/ProductForm" element={<ProductForm />}></Route>
               <Route path="/CategoryForm" element={<CategoryForm />}></Route>
               <Route path="/VendorForm" element={<VendorForm />}></Route>
-              <Route path="/BillForm" element={<BillForm />}></Route>
+              <Route path="/PharBills" element={<PharBills />}></Route>
+              <Route path="/PharSales" element={<PharSales />}></Route>
+              <Route
+                path="/PharSalesHistory"
+                element={<PharSalesHistory />}
+              ></Route>
+              <Route path="/TearBreakage" element={<TearBreakage />}></Route>
+              <Route
+                path="/TearBreakagesHistory"
+                element={<TearBreakagesHistory />}
+              ></Route>
               {/* <Route path="/VendorForm" element={<VendorForm />}>
                
               </Route> */}
 
               {/* <Route path="*" element={<Home />}></Route> */}
             </Routes>
-
             {/* <Dashboard></Dashboard> */}
             {/* <ProductForm></ProductForm> */}
             {/* <CategoryForm></CategoryForm> */}

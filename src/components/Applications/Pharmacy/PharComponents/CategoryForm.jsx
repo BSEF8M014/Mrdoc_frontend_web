@@ -14,7 +14,7 @@ const CategoryForm = () => {
       <h1 className="text-blue-600 text-[30px]">
         <b>Categories</b>
       </h1>
-      <div className="my-6 w-[60%]">
+      <div className="card-shadow p-6 m-6 w-[70%]">
         <form>
           <div class="relative z-0 w-full mb-6 group">
             <input
